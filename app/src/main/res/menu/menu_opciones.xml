@@ -8,5 +8,12 @@
         android:orderInCategory="102"
         app:showAsAction="always"
         android:icon="@drawable/star_5"    />
+    <item android:id="@+id/mContact"
+        android:title="@string/menu_contact"
+        android:orderInCategory="200"></item>
+    <item android:id="@+id/mAbout"
+        android:title="@string/menu_about"
+        android:orderInCategory="100"></item>
+
 
 </menu>

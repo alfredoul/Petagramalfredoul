@@ -1,57 +1,59 @@
 package mx.alfredoul.petagram;
 
 import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
 
-import static mx.alfredoul.petagram.R.id.item_touch_helper_previous_elevation;
-import static mx.alfredoul.petagram.R.id.rvPets;
+import mx.alfredoul.petagram.adapter.PageAdapter;
+import mx.alfredoul.petagram.adapter.RVAdaptador;
+import mx.alfredoul.petagram.fragment.MascotaFragment;
+import mx.alfredoul.petagram.fragment.RecyclerviewFragment;
+import mx.alfredoul.petagram.pojo.Pet;
 
 public class MainActivity extends AppCompatActivity {
-
-    ArrayList<Pet> pets; //creamos nuestro arreglo que contendrá las mascotas, lo declaramos fuera del metodo oncreate
-    private RecyclerView listPets;
-
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // rvPets es el id que dimos en activity_main a mi definicion del recyclerView
-        listPets = (RecyclerView) findViewById(R.id.rvPets);
+        toolbar=(Toolbar)  findViewById(R.id.toolbar);
+        tabLayout=(TabLayout)  findViewById(R.id.tabLayout);
+        viewPager=(ViewPager)  findViewById(R.id.viewPager);
+        setUpViewPager();
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        listPets.setLayoutManager(llm);
-
-        inicicializarListaPets();
-        inicializarAdaptador();
+        if (toolbar!= null) {
+            setSupportActionBar(toolbar);
+        }
 
     }
 
-    public void inicicializarListaPets() {
-        pets = new ArrayList<Pet>();
-        pets.add(new Pet("Hugo", "2", R.drawable.pet1));
-        pets.add(new Pet("Emma", "4", R.drawable.pet2));
-        pets.add(new Pet("Daniel", "5", R.drawable.pet3));
-        pets.add(new Pet("Pablo", "5", R.drawable.pet4));
-        pets.add(new Pet("Sofia", "4", R.drawable.pet5));
-        pets.add(new Pet("Santiago", "4", R.drawable.pet6));
-        pets.add(new Pet("Camila", "3", R.drawable.pet7));
-        pets.add(new Pet("Sebastián", "2", R.drawable.pet8));
-        pets.add(new Pet("Valentina", "2", R.drawable.pet9));
-        pets.add(new Pet("Diego", "4", R.drawable.pet10));
+    private ArrayList<Fragment> agregarFragments(){
+        ArrayList<Fragment> fragments=new ArrayList<>();
+        fragments.add(new RecyclerviewFragment());
+        fragments.add(new MascotaFragment());
+
+        return fragments;
     }
 
-    public void inicializarAdaptador () {
-        RVAdaptador adaptador = new RVAdaptador(pets, this);
-        listPets.setAdapter(adaptador);
+    private void setUpViewPager(){
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
+        tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setText("Home");
+        tabLayout.getTabAt(1).setText("MyPet");
+        //tabLayout.getTabAt(1).setIcon(R.drawable.ic_perm_identity_white);
     }
 
     @Override
@@ -67,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, ActivityFavoritos.class);
                 startActivity(intent);
                 break;
+            case R.id.mContact:
+                Intent intent1 = new Intent (this, ContactActivity.class);
+                startActivity(intent1);;
+                break;
+            case R.id.mAbout:
+                Intent intent2=new Intent(this,AboutActivity.class);
+                startActivity(intent2);
         }
         return super.onOptionsItemSelected(item);
     }

@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Petagram</string>
+    <string name="menu_contact">Contacto</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="about_about_title">Acerca de nosotros</string>
+    <string name="about_about">José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. </string>
+    <string name="about_support_title">Soporte y Servicio a Cliente</string>
+    <string name="about_support">José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. José compró una vieja zampoña en Perú. Excusándose, Sofía tiró su whisky al desagüe de la banqueta. </string>
+    <string name="contact_title">Formulario de contacto</string>
+    <string name="contact_name">Nombre completo</string>
+    <string name="contact_email">Correo electrónico</string>
+    <string name="contact_message">Mensaje</string>
+    <string name="contact_send">Enviar comentarios</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
