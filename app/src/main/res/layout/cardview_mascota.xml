@@ -3,15 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cv"
-    android:layout_width="150dp"
-    android:layout_height="180dp"
-    android:layout_margin="4dp"
-    card_view:cardCornerRadius="4dp">
+    android:layout_width="100dp"
+    android:layout_height="135dp"
+    android:layout_margin="2dp"
+    card_view:cardCornerRadius="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -21,7 +22,7 @@
 
             <ImageView
                 android:layout_width="wrap_content"
-                android:layout_height="150dp"
+                android:layout_height="100dp"
                 android:id="@+id/ivLucas"
                 android:scaleType="centerCrop"
                 android:src="@drawable/pet1"

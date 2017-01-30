@@ -3,6 +3,7 @@ package mx.alfredoul.petagram.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -36,10 +37,10 @@ public class MascotaFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.fragment_mascota, container, false);
-
         listMascotas = (RecyclerView) v.findViewById(R.id.rvLucas);
 
-        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        //LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        GridLayoutManager llm = new GridLayoutManager(getActivity(),3);
         listMascotas.setLayoutManager(llm);
 
         inicicializarListaMascotas();
