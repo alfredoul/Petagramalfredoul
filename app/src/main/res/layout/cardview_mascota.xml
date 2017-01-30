@@ -22,7 +22,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
-                android:id="@+id/ivPhotoCV"
+                android:id="@+id/ivLucas"
                 android:scaleType="centerCrop"
                 android:src="@drawable/pet1"
                 android:layout_alignParentTop="true"
@@ -32,11 +32,11 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@id/ivPhotoCV"
+                android:layout_below="@id/ivLucas"
                 android:weightSum="1">
 
                 <TextView
-                    android:id="@+id/tvRateCV"
+                    android:id="@+id/tvRateL"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -25,9 +25,16 @@
             app:civ_shadow="true"
             app:civ_shadow_radius="10"
             app:civ_shadow_color="#8BC34A"/>
+        <TextView
+            android:id="@+id/tvNombreLucas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/ciPet"
+            android:text="Lucas"/>
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvMascota"
-            android:layout_below="@+id/ciPet"
+            android:id="@+id/rvLucas"
+            android:layout_below="@id/tvNombreLucas"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             />
