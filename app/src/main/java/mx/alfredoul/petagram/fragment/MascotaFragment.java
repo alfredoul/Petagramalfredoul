@@ -64,6 +64,7 @@ public class MascotaFragment extends Fragment {
     public void inicializarAdaptadorMascotas () {
         RVAdaptadorLucas adaptadorMascota = new RVAdaptadorLucas(mascotas, getActivity());
         listMascotas.setAdapter(adaptadorMascota);
+
     }
 
 }
