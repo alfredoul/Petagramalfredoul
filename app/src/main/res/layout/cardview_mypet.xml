@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv"
+    android:layout_width="100dp"
+    android:layout_height="135dp"
+    android:layout_margin="2dp"
+    card_view:cardCornerRadius="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:id="@+id/ivLucas"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pet1"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/ivLucas"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvRateL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="viewEnd"
+                    android:text="5"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:src="@drawable/bone"
+                    android:id="@+id/imageView" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+

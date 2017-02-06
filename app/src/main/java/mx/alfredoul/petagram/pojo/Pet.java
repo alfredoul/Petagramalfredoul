@@ -10,14 +10,19 @@ import java.util.List;
 
 public class Pet {
 
+    private int id;
     private String nombre;
-    private String rate;
+    private int rate;
     private int photo;
 
-    public Pet(String nombre, String rate, int photo) {
+    public Pet(String nombre, int rate, int photo) {
         this.nombre = nombre;
         this.rate = rate;
         this.photo = photo;
+    }
+
+    public Pet() {
+
     }
 
     public String getNombre() {
@@ -28,11 +33,11 @@ public class Pet {
         this.nombre = nombre;
     }
 
-    public String getRate() {
+    public int getRate() {
         return rate;
     }
 
-    public void setRate(String rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 
@@ -44,4 +49,11 @@ public class Pet {
         this.photo = photo;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

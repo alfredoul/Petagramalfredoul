@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -14,10 +13,8 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 
 import mx.alfredoul.petagram.adapter.PageAdapter;
-import mx.alfredoul.petagram.adapter.RVAdaptador;
-import mx.alfredoul.petagram.fragment.MascotaFragment;
-import mx.alfredoul.petagram.fragment.RecyclerviewFragment;
-import mx.alfredoul.petagram.pojo.Pet;
+import mx.alfredoul.petagram.fragment.MypetFragment;
+import mx.alfredoul.petagram.fragment.PetFragment;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -42,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Fragment> agregarFragments(){
         ArrayList<Fragment> fragments=new ArrayList<>();
-        fragments.add(new RecyclerviewFragment());
-        fragments.add(new MascotaFragment());
+        fragments.add(new PetFragment());
+        fragments.add(new MypetFragment());
 
         return fragments;
     }
@@ -66,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.mFavoritos:
-                Intent intent = new Intent(this, ActivityFavoritos.class);
+                Intent intent = new Intent(this, FavoritesActivity.class);
                 startActivity(intent);
                 break;
             case R.id.mContact:

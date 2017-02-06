@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="0dp"
     android:background="@drawable/logopetagram"
-    tools:context="mx.alfredoul.petagram.ActivityFavoritos">
+    tools:context="mx.alfredoul.petagram.FavoritesActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvPets"

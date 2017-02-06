@@ -32,6 +32,7 @@
             android:layout_marginTop="8pt"
             android:weightSum="1">
             <ImageView
+                android:id="@+id/btnLike"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/empty_bone"/>
@@ -41,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="Mascotita"
+                android:layout_marginLeft="12dp"
                 android:textStyle="bold" />
 
             <TextView
