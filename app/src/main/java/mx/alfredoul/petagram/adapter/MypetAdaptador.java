@@ -35,7 +35,7 @@ public class MypetAdaptador extends RecyclerView.Adapter<MypetAdaptador.LucasVie
 
     @Override
     public void onBindViewHolder(LucasViewHolder personViewHolder, int i) {
-        personViewHolder.petRate.setText(pets.get(i).getRate());
+        personViewHolder.petRate.setText(String.valueOf(pets.get(i).getRate()));
         personViewHolder.petPhoto.setImageResource(pets.get(i).getPhoto());
     }
 

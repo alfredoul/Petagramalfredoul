@@ -7,19 +7,17 @@ package mx.alfredoul.petagram.pojo;
 
 public class Mypet {
 
-    private String rate;
+    private int rate;
     private int photo;
 
-    public Mypet(String rate, int photo) {
+    public Mypet(int rate, int photo) {
         this.rate = rate;
         this.photo = photo;
     }
 
-    public String getRate() {
-        return rate;
-    }
+    public int getRate() { return rate; }
 
-    public void setRate(String rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 

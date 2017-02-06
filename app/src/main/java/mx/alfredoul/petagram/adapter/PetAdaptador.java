@@ -27,7 +27,7 @@ public class PetAdaptador extends RecyclerView.Adapter<PetAdaptador.PetViewHolde
     Activity activity;
 
     public PetAdaptador(ArrayList<Pet> pets, Activity activity) {
-        this.pets  = pets;
+        this.pets       = pets;
         this.activity   = activity;
     }
 
@@ -43,6 +43,7 @@ public class PetAdaptador extends RecyclerView.Adapter<PetAdaptador.PetViewHolde
 
         personViewHolder.petName.setText(pets.get(i).getNombre());
         personViewHolder.petPhoto.setImageResource(pets.get(i).getPhoto());
+        personViewHolder.petRate.setText(String.valueOf(pets.get(i).getRate()));
 
         personViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override

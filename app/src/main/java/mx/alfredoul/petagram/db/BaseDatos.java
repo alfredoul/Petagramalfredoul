@@ -64,6 +64,7 @@ public class BaseDatos extends SQLiteOpenHelper {
             petActual.setNombre(registros.getString(1));
             petActual.setPhoto(registros.getInt(2));
 
+
             String queryLikes = "SELECT COUNT ("+ConstantesBaseDatos.TABLE_PET_LIKES_NUM_LIKES+")"+
                                 " FROM "+ ConstantesBaseDatos.TABLE_PET_LIKES +
                                 " WHERE "+ ConstantesBaseDatos.TABLE_PET_LIKES_ID + "=" + petActual.getId();
@@ -73,7 +74,6 @@ public class BaseDatos extends SQLiteOpenHelper {
             } else {
                 petActual.setRate(0);
             }
-
 
             pets.add(petActual);
         }

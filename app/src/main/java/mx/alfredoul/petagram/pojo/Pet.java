@@ -33,13 +33,9 @@ public class Pet {
         this.nombre = nombre;
     }
 
-    public int getRate() {
-        return rate;
-    }
+    public int getRate() { return rate; }
 
-    public void setRate(int rate) {
-        this.rate = rate;
-    }
+    public void setRate(int rate) { this.rate = rate; }
 
     public int getPhoto() {
         return photo;
