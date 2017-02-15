@@ -1,6 +1,7 @@
 package mx.alfredoul.petagram.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 
+import mx.alfredoul.petagram.FotoPetActivity;
 import mx.alfredoul.petagram.db.PetConstructor;
 import mx.alfredoul.petagram.pojo.Pet;
 import mx.alfredoul.petagram.R;
@@ -38,26 +40,35 @@ public class PetAdaptador extends RecyclerView.Adapter<PetAdaptador.PetViewHolde
     }
 
     @Override
-    public void onBindViewHolder(final PetViewHolder personViewHolder, int i) {
+    public void onBindViewHolder(final PetViewHolder petViewHolder, int i) {
         final Pet pet = pets.get(i);
 
-        personViewHolder.petName.setText(pets.get(i).getNombre());
-        personViewHolder.petPhoto.setImageResource(pets.get(i).getPhoto());
-        personViewHolder.petRate.setText(String.valueOf(pets.get(i).getRate()));
+        petViewHolder.petName.setText(pets.get(i).getNombre());
+        petViewHolder.petPhoto.setImageResource(pets.get(i).getPhoto());
+        petViewHolder.petRate.setText(String.valueOf(pets.get(i).getRate()));
 
-        personViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
+        petViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 Toast.makeText(activity, "Diste like",Toast.LENGTH_SHORT).show();
 
                 PetConstructor petConstructor = new PetConstructor(activity);
                 petConstructor.darLikePet(pet);
-                personViewHolder.petRate.setText(String.valueOf(petConstructor.obtenerLikesPet(pet)));
+                petViewHolder.petRate.setText(String.valueOf(petConstructor.obtenerLikesPet(pet)));
 
             }
         }
-
         );
+        petViewHolder.petPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(activity, "Abriendo Foto", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(activity, FotoPetActivity.class);
+                intent.putExtra("foto", pet.getPhoto());
+                intent.putExtra("rate", pet.getRate());
+                activity.startActivity(intent);
+            }
+        });
     }
 
     @Override
