@@ -9,7 +9,7 @@
     >
     <android.support.v7.widget.CardView
         android:id="@+id/vFoto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
         card_view:cardCornerRadius="2dp">
@@ -27,11 +27,11 @@
                 >
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/ivFoto"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/pet4"
+                    android:src="@drawable/pet2"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="50dp"/>

@@ -23,22 +23,8 @@ public class PetConstructor {
     }
 
     public ArrayList<Pet> obtenerDatos(){
-        /*ArrayList<Pet> pets = new ArrayList<>();
-        pets = new ArrayList<Pet>();
-        pets.add(new Pet("Hugo", "2", R.drawable.pet1 ));
-        pets.add(new Pet("Emma", "4", R.drawable.pet2));
-        pets.add(new Pet("Daniel", "5", R.drawable.pet3));
-        pets.add(new Pet("Pablo", "5", R.drawable.pet4));
-        pets.add(new Pet("Sofia", "4", R.drawable.pet5));
-        pets.add(new Pet("Santiago", "4", R.drawable.pet6));
-        pets.add(new Pet("Camila", "3", R.drawable.pet7));
-        pets.add(new Pet("Sebastián", "2", R.drawable.pet8));
-        pets.add(new Pet("Valentina", "2", R.drawable.pet9));
-        pets.add(new Pet("Diego", "4", R.drawable.pet10));
-        return pets;*/
-
         BaseDatos db = new BaseDatos(context);
-        insertarPetsDummy(db);
+        //insertarPetsDummy(db);
         return  db.obtenerTodasLasPets();
     }
 

@@ -49,14 +49,14 @@ public class MypetFragment extends Fragment {
     public void inicicializarListaMascotas() {
         mascotas = new ArrayList<Mypet>();
         mascotas.add(new Mypet(1, R.drawable.lucas2));
-        /*mascotas.add(new Mypet(4, R.drawable.lucas3));
+        mascotas.add(new Mypet(4, R.drawable.lucas3));
         mascotas.add(new Mypet(5, R.drawable.lucas4));
         mascotas.add(new Mypet(5, R.drawable.lucas5));
         mascotas.add(new Mypet(4, R.drawable.lucas6));
         mascotas.add(new Mypet(4, R.drawable.lucas7));
         mascotas.add(new Mypet(3, R.drawable.lucas8));
         mascotas.add(new Mypet(2, R.drawable.lucas9));
-        mascotas.add(new Mypet(2, R.drawable.lucas10));*/
+        mascotas.add(new Mypet(2, R.drawable.lucas10));
     }
 
     public void inicializarAdaptadorMascotas () {

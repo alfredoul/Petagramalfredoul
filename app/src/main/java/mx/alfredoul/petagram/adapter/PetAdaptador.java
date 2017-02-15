@@ -62,7 +62,7 @@ public class PetAdaptador extends RecyclerView.Adapter<PetAdaptador.PetViewHolde
         petViewHolder.petPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(activity, "Abriendo Foto", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(activity, "Abriendo Foto", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(activity, FotoPetActivity.class);
                 intent.putExtra("foto", pet.getPhoto());
                 intent.putExtra("rate", pet.getRate());
